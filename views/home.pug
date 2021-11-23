@@ -1,21 +1,13 @@
-doctype html
-html
-  head
-    title Swarg Dance Academy 
-    style
-      include ../static/style.css
-  body
-    nav#navbar
-        ul  
-            div#logo 
-                img(src="/static/logo.jfif")
-                | SWARG
-            li #[a(href="/") Home]
-            li #[a(href="/") About] 
-            li #[a(href="/") Services]
-            li #[a(href="/") Class Info] 
-            li #[a(href="/") Contact Us]
+extends base.pug
 
+block scripts  
+  script(src='/static/index.js')
+
+block style 
+    style 
+      include ../static/style.css   
+
+block content      
     section#introSection
         div WELCOME TO RAGINI'S DANCE ACADEMY
         div.small Eat  Sleep  Dance  Repeat
@@ -53,7 +45,3 @@ html
             img(src="/static/logo2.jpg",alt="Sponsor Image",class="spImage") 
             img(src="/static/logo3.png",alt="Sponsor Image",class="spImage") 
             img(src="/static/logo4.jfif",alt="Sponsor Image",class="spImage") 
-    footer#footer
-        | Copyright 2021 RaginiDanceAcademy.com | All rights reserved 
-    script
-      include ../static/index.js
